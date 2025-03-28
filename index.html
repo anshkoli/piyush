@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HivePure - Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+ <nav class="navbar">
+    <div class="logo">HivePure</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="process.html">Our Process</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="checkout.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+    <div class="menu-icon">&#9776;</div>
+  </nav>
+ <!-- Image Gallery Section -->
+<!-- Image Gallery Section -->
+<div class="gallery-section">
+  <!-- <h2>Explore Our World</h2> -->
+  <div class="gallery-container">
+    <button class="scroll-button left" onclick="scrollGallery(-1)">&#10094;</button>
+    <div class="gallery-scroll">
+      <img src="images/hive1.jpg" alt="Hive Image 1">
+      <img src="images/hive2.jpg" alt="Hive Image 2">
+      <img src="images/hive3.jpg" alt="Hive Image 3">
+      <img src="images/hive4.jpg" alt="Hive Image 4">
+      <img src="images/hive5.jpg" alt="Hive Image 5">
+    </div>
+    <button class="scroll-button right" onclick="scrollGallery(1)">&#10095;</button>
+  </div>
+</div>
+   <!-- Honey-Making Process Section -->
+   <div class="process-section">
+    <h2 class="section-title">Our Honey-Making Process</h2>
+    <div class="process-steps">
+      <!-- Step 1: Beekeeping -->
+      <div class="process-step">
+        <img src="images/process1.webp" alt="Step 1: Beekeeping">
+        <h3> Beekeeping</h3>
+        <p>We maintain healthy beehives in natural environments to ensure the highest quality honey.</p>
+      </div>
+
+      
+    </div>
+  </div>
+
+   <!-- #MustHave Section -->
+   <section id="musthave">
+    <h2>#MustHave</h2>
+    <div class="product-grid">
+      <!-- Product 1: Raw Honey - 250ml -->
+      <div class="product-card">
+        <div class="product-images">
+          <button class="scroll-arrow left" onclick="scrollImages(this, -1)">&#10094;</button>
+          <div class="image-container">
+            <img src="images/honey_250ml_1.jpg" alt="Raw Honey 250ml">
+            <img src="images/honey_250ml_2.jpg" alt="Raw Honey 250ml">
+            <img src="images/honey_250ml_3.jpg" alt="Raw Honey 250ml">
+          </div>
+          <button class="scroll-arrow right" onclick="scrollImages(this, 1)">&#10095;</button>
+        </div>
+        <h3>Raw Honey - 250ml</h3>
+        <p class="description">Pure, unprocessed honey in a convenient 250ml bottle. Perfect for daily use.</p>
+        <p class="price">₹199</p>
+        <button onclick="addToCart('Raw Honey - 250ml', 199)">Add to Cart</button>
+      </div>
+
+      <!-- Product 2: Raw Honey - 500ml -->
+      <div class="product-card">
+        <div class="product-images">
+          <button class="scroll-arrow left" onclick="scrollImages(this, -1)">&#10094;</button>
+          <div class="image-container">
+            <img src="images/honey_500ml_1.jpg" alt="Raw Honey 500ml">
+            <img src="images/honey_500ml_2.jpg" alt="Raw Honey 500ml">
+            <img src="images/honey_500ml_3.jpg" alt="Raw Honey 500ml">
+          </div>
+          <button class="scroll-arrow right" onclick="scrollImages(this, 1)">&#10095;</button>
+        </div>
+        <h3>Raw Honey - 500ml</h3>
+        <p class="description">Pure, unprocessed honey in a 500ml bottle. Great for families.</p>
+        <p class="price">₹349</p>
+        <button onclick="addToCart('Raw Honey - 500ml', 349)">Add to Cart</button>
+      </div>
+
+      <!-- Product 3: Raw Honey - 1L -->
+      <div class="product-card">
+        <div class="product-images">
+          <button class="scroll-arrow left" onclick="scrollImages(this, -1)">&#10094;</button>
+          <div class="image-container">
+            <img src="images/honey_1L_1.jpg" alt="Raw Honey 1L">
+            <img src="images/honey_1L_2.jpg" alt="Raw Honey 1L">
+            <img src="images/honey_1L_3.jpg" alt="Raw Honey 1L">
+          </div>
+          <button class="scroll-arrow right" onclick="scrollImages(this, 1)">&#10095;</button>
+        </div>
+        <h3>Raw Honey - 1L</h3>
+        <p class="description">Pure, unprocessed honey in a 1L bottle. Ideal for bulk usage.</p>
+        <p class="price">₹599</p>
+        <button onclick="addToCart('Raw Honey - 1L', 599)">Add to Cart</button>
+      </div>
+
+      <!-- Product 4: Organic Beeswax Candles -->
+      <div class="product-card">
+        <div class="product-images">
+          <button class="scroll-arrow left" onclick="scrollImages(this, -1)">&#10094;</button>
+          <div class="image-container">
+            <img src="images/beeswax_1.jpg" alt="Organic Beeswax Candles">
+            <img src="images/beeswax_2.jpg" alt="Organic Beeswax Candles">
+            <img src="images/beeswax_3.jpg" alt="Organic Beeswax Candles">
+          </div>
+          <button class="scroll-arrow right" onclick="scrollImages(this, 1)">&#10095;</button>
+        </div>
+        <h3>Organic Beeswax Candles</h3>
+        <p class="description">Eco-friendly candles made from pure beeswax. Long-lasting and aromatic.</p>
+        <p class="price">₹199</p>
+        <button onclick="addToCart('Organic Beeswax Candles', 199)">Add to Cart</button>
+      </div>
+    </div>
+    <!-- More Products Button -->
+    <div class="more-products">
+      <a href="products.html" class="more-products-btn">More Products</a>
+    </div>
+  </section>
+
+ <!-- Eye-catching Description Section -->
+<div class="description-section">
+  <h2 class="section-title">Why Choose HivePure?</h2>
+  <div class="benefits-grid">
+    <!-- Benefit 1 -->
+    <div class="benefit-card">
+      <div class="benefit-icon">🍯</div>
+      <h3>Pure. Raw. Natural.</h3>
+      <p>Straight from hive to your home, exactly as nature intended</p>
+    </div>
+    
+    <!-- Benefit 2 -->
+    <div class="benefit-card">
+      <div class="benefit-icon">👅</div>
+      <h3>No Processing</h3>
+      <p>Never heated or filtered to preserve authentic taste and nutrients</p>
+    </div>
+    
+    <!-- Benefit 3 -->
+    <div class="benefit-card">
+      <div class="benefit-icon">🐝</div>
+      <h3>Bee Conservation</h3>
+      <p>Ethical practices that protect and nurture bee colonies</p>
+    </div>
+    
+    <!-- Benefit 4 -->
+    <div class="benefit-card">
+      <div class="benefit-icon">✖️</div>
+      <h3>No Additives</h3>
+      <p>100% pure honey with absolutely nothing added</p>
+    </div>
+    
+    <!-- Benefit 5 -->
+    <div class="benefit-card">
+      <div class="benefit-icon">❌🔥</div>
+      <h3>Never Heated</h3>
+      <p>Cold-extracted to preserve enzymes and health benefits</p>
+    </div>
+    
+    <!-- Benefit 6 -->
+    <div class="benefit-card">
+      <div class="benefit-icon">💛</div>
+      <h3>Gentle Harvesting</h3>
+      <p>We never over-harvest or stress our bees</p>
+    </div>
+    
+    <!-- Benefit 7 -->
+    <div class="benefit-card">
+      <div class="benefit-icon">🌱</div>
+      <h3>Sustainable Farming</h3>
+      <p>Environmentally responsible practices that protect ecosystems</p>
+    </div>
+  </div>
+</div>
+  <script>
+    function scrollGallery(direction) {
+      const galleryScroll = document.querySelector('.gallery-scroll');
+      const imageWidth = galleryScroll.querySelector('img').clientWidth; // Get width of one image
+      const scrollAmount = imageWidth; // Scroll by one image width
+      const maxScroll = galleryScroll.scrollWidth - galleryScroll.clientWidth; // Maximum scrollable distance
+  
+      // Current scroll position
+      let currentScroll = galleryScroll.scrollLeft;
+  
+      // Calculate new scroll position
+      let newScroll = currentScroll + direction * scrollAmount;
+  
+      // Loop to the first image if scrolling past the last image
+      if (newScroll > maxScroll) {
+        newScroll = 0; // Scroll to the first image
+      }
+      // Loop to the last image if scrolling before the first image
+      else if (newScroll < 0) {
+        newScroll = maxScroll; // Scroll to the last image
+      }
+  
+      // Smoothly scroll to the new position
+      galleryScroll.scrollTo({
+        left: newScroll,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+  <script>
+    let cart = [];
+
+    // Function to add items to the cart
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      updateCartCount();
+      alert(`${name} added to cart!`);
+    }
+
+    // Function to update the cart count
+    function updateCartCount() {
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    // Function to scroll product images
+    function scrollImages(button, direction) {
+      const imageContainer = button.parentElement.querySelector('.image-container');
+      const scrollAmount = 200; // Adjust scroll distance
+      imageContainer.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+
+    // Save cart to localStorage when leaving the page
+    window.onbeforeunload = () => {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    };
+
+    // Load cart from localStorage when the page loads
+    window.onload = () => {
+      const savedCart = localStorage.getItem('cart');
+      if (savedCart) {
+        cart = JSON.parse(savedCart);
+        updateCartCount();
+      }
+    };
+  </script>
+  
+</body>

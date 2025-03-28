@@ -1,0 +1,60 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HivePure - Payment</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">HivePure</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="process.html">Our Process</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="checkout.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+    <div class="menu-icon">&#9776;</div>
+  </nav>
+
+  <!-- Payment Content -->
+  <section id="payment">
+    <h2>Payment</h2>
+    <form id="payment-form">
+      <label for="card-number">Card Number:</label>
+      <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+
+      <label for="expiry-date">Expiry Date:</label>
+      <input type="text" id="expiry-date" placeholder="MM/YY" required>
+
+      <label for="cvv">CVV:</label>
+      <input type="text" id="cvv" placeholder="123" required>
+
+      <button type="submit">Pay Now</button>
+    </form>
+  </section>
+
+  <!-- JavaScript for Payment -->
+  <script>
+    // Function to handle payment submission
+    document.getElementById('payment-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Payment successful! Thank you for your purchase.');
+      localStorage.removeItem('cart'); // Clear the cart
+      window.location.href = 'index.html'; // Redirect to home page
+    });
+
+    // Update cart count
+    window.onload = () => {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      document.getElementById('cart-count').textContent = cart.length;
+    };
+  </script>
+</body>

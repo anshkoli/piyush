@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HivePure - Products</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">HivePure</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="process.html">Our Process</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="checkout.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+    <div class="menu-icon">&#9776;</div>
+  </nav>
+  <!-- Products Content -->
+  <section id="products">
+    <h2>Our Products</h2>
+
+    <!-- Honey Category -->
+    <div class="category">
+      <h3>Honey</h3>
+      <div class="product-grid">
+        <!-- Raw Honey - 250ml -->
+        <div class="product-card">
+          <div class="product-images">
+            <button class="scroll-arrow left" onclick="scrollImages(this, -1)">&#10094;</button>
+            <div class="image-container">
+              <img src="images/honey_250ml_1.jpg" alt="Raw Honey 250ml">
+              <img src="images/honey_250ml_2.jpg" alt="Raw Honey 250ml">
+              <img src="images/honey_250ml_3.jpg" alt="Raw Honey 250ml">
+            </div>
+            <button class="scroll-arrow right" onclick="scrollImages(this, 1)">&#10095;</button>
+          </div>
+          <h3>Raw Honey - 250ml</h3>
+          <p class="description">Pure, unprocessed honey in a convenient 250ml bottle. Perfect for daily use.</p>
+          <p class="price">₹199</p>
+          <button onclick="addToCart('Raw Honey - 250ml', 199)">Add to Cart</button>
+        </div>
+
+        <!-- Raw Honey - 500ml -->
+        <div class="product-card">
+          <div class="product-images">
+            <button class="scroll-arrow left" onclick="scrollImages(this, -1)">&#10094;</button>
+            <div class="image-container">
+              <img src="images/honey_500ml_1.jpg" alt="Raw Honey 500ml">
+              <img src="images/honey_500ml_2.jpg" alt="Raw Honey 500ml">
+              <img src="images/honey_500ml_3.jpg" alt="Raw Honey 500ml">
+            </div>
+            <button class="scroll-arrow right" onclick="scrollImages(this, 1)">&#10095;</button>
+          </div>
+          <h3>Raw Honey - 500ml</h3>
+          <p class="description">Pure, unprocessed honey in a 500ml bottle. Great for families.</p>
+          <p class="price">₹349</p>
+          <button onclick="addToCart('Raw Honey - 500ml', 349)">Add to Cart</button>
+        </div>
+
+        <!-- Raw Honey - 1L -->
+        <div class="product-card">
+          <div class="product-images">
+            <button class="scroll-arrow left" onclick="scrollImages(this, -1)">&#10094;</button>
+            <div class="image-container">
+              <img src="images/honey_1L_1.jpg" alt="Raw Honey 1L">
+              <img src="images/honey_1L_2.jpg" alt="Raw Honey 1L">
+              <img src="images/honey_1L_3.jpg" alt="Raw Honey 1L">
+            </div>
+            <button class="scroll-arrow right" onclick="scrollImages(this, 1)">&#10095;</button>
+          </div>
+          <h3>Raw Honey - 1L</h3>
+          <p class="description">Pure, unprocessed honey in a 1L bottle. Ideal for bulk usage.</p>
+          <p class="price">₹599</p>
+          <button onclick="addToCart('Raw Honey - 1L', 599)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Bee Products Category -->
+    <div class="category">
+      <h3>Other Bee Products</h3>
+      <div class="product-grid">
+        <!-- Organic Beeswax Candles -->
+        <div class="product-card">
+          <div class="product-images">
+            <button class="scroll-arrow left" onclick="scrollImages(this, -1)">&#10094;</button>
+            <div class="image-container">
+              <img src="images/beeswax_1.jpg" alt="Organic Beeswax Candles">
+              <img src="images/beeswax_2.jpg" alt="Organic Beeswax Candles">
+              <img src="images/beeswax_3.jpg" alt="Organic Beeswax Candles">
+            </div>
+            <button class="scroll-arrow right" onclick="scrollImages(this, 1)">&#10095;</button>
+          </div>
+          <h3>Organic Beeswax Candles</h3>
+          <p class="description">Eco-friendly candles made from pure beeswax. Long-lasting and aromatic.</p>
+          <p class="price">₹199</p>
+          <button onclick="addToCart('Organic Beeswax Candles', 199)">Add to Cart</button>
+        </div>
+
+        <!-- Propolis Tincture -->
+        <div class="product-card">
+          <div class="product-images">
+            <button class="scroll-arrow left" onclick="scrollImages(this, -1)">&#10094;</button>
+            <div class="image-container">
+              <img src="images/propolis_1.jpg" alt="Propolis Tincture">
+              <img src="images/propolis_2.jpg" alt="Propolis Tincture">
+              <img src="images/propolis_3.jpg" alt="Propolis Tincture">
+            </div>
+            <button class="scroll-arrow right" onclick="scrollImages(this, 1)">&#10095;</button>
+          </div>
+          <h3>Propolis Tincture</h3>
+          <p class="description">A natural immune booster made from bee propolis. Alcohol-free and pure.</p>
+          <p class="price">₹499</p>
+          <button onclick="addToCart('Propolis Tincture', 499)">Add to Cart</button>
+        </div>
+
+        <!-- Bee Pollen -->
+        <div class="product-card">
+          <div class="product-images">
+            <button class="scroll-arrow left" onclick="scrollImages(this, -1)">&#10094;</button>
+            <div class="image-container">
+              <img src="images/pollen_1.jpg" alt="Bee Pollen">
+              <img src="images/pollen_2.jpg" alt="Bee Pollen">
+              <img src="images/pollen_3.jpg" alt="Bee Pollen">
+            </div>
+            <button class="scroll-arrow right" onclick="scrollImages(this, 1)">&#10095;</button>
+          </div>
+          <h3>Bee Pollen</h3>
+          <p class="description">Nutrient-rich bee pollen, packed with vitamins and minerals.</p>
+          <p class="price">₹399</p>
+          <button onclick="addToCart('Bee Pollen', 399)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JavaScript for Cart and Image Scrolling -->
+  <script>
+    let cart = [];
+
+    // Function to add items to the cart
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      updateCartCount();
+      alert(`${name} added to cart!`);
+    }
+
+    // Function to update the cart count
+    function updateCartCount() {
+      document.getElementById('cart-count').textContent = cart.length;
+    }
+
+    // Function to scroll product images
+    function scrollImages(button, direction) {
+      const imageContainer = button.parentElement.querySelector('.image-container');
+      const scrollAmount = 200; // Adjust scroll distance
+      imageContainer.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+
+    // Save cart to localStorage when leaving the page
+    window.onbeforeunload = () => {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    };
+
+    // Load cart from localStorage when the page loads
+    window.onload = () => {
+      const savedCart = localStorage.getItem('cart');
+      if (savedCart) {
+        cart = JSON.parse(savedCart);
+        updateCartCount();
+      }
+    };
+  </script>
+</body>

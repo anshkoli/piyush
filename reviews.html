@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HivePure - Customer Reviews</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reviews.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">HivePure</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="process.html">Our Process</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="reviews.html">Reviews</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="checkout.html" class="cart-icon">🛒 <span id="cart-count">0</span></a>
+    <div class="menu-icon">&#9776;</div>
+  </nav>
+
+  <!-- Review Section -->
+  <section class="reviews-container">
+    <h1>Customer Reviews</h1>
+    
+    <!-- Review Form -->
+    <div class="review-form">
+      <h2>Share Your Experience</h2>
+      <form id="reviewForm">
+        <div class="form-group">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" required>
+        </div>
+        <div class="form-group">
+          <label for="product">Product Purchased:</label>
+          <select id="product" required>
+            <option value="">Select a product</option>
+            <option value="Raw Honey - 250ml">Raw Honey - 250ml</option>
+            <option value="Raw Honey - 500ml">Raw Honey - 500ml</option>
+            <option value="Raw Honey - 1L">Raw Honey - 1L</option>
+            <option value="Organic Beeswax Candles">Organic Beeswax Candles</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="rating">Rating:</label>
+          <div class="rating-stars">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+          <input type="hidden" id="rating" required>
+        </div>
+        <div class="form-group">
+          <label for="review">Your Review:</label>
+          <textarea id="review" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Submit Review</button>
+      </form>
+    </div>
+    
+    <!-- Reviews Display -->
+    <div class="reviews-display">
+      <h2>What Our Customers Say</h2>
+      <div id="reviewsList" class="reviews-list">
+        <!-- Reviews will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+
+  <script src="reviews.js"></script>
+</body>
+</html>
